@@ -1,17 +1,17 @@
 import React from "react";
-import  {Grid}  from "@mui/material";
-import Sidebar from "./Components/Sidebar/Sidebar";
-import Header from "./Components/Header/Header";
-import OverviewCards from "./Components/OverviewCards/OverviewCards";
-import ConversationsChart from "./Components/ConversationChart/ConversationChart";
-import OperatorsList from "./Components/OperatorsList.tsx/OperatorsList";
-import ConversationsTable from "./Components/ConversationTable/ConversationTable";
-import menuItems from "./data/menuItems";
-import overviewCardsData from "./data/overviewCardData";
-import operatorsData from "./data/operatorsData";
-import conversationsData from "./data/conversationData";
+import { Grid } from "@mui/material";
+import Sidebar from "../Components/Sidebar/Sidebar";
+import Header from "../Components/Header/Header";
+import OverviewCards from "../Components/OverviewCards/OverviewCards";
+import ConversationsChart from "../Components/ConversationChart/ConversationChart";
+import OperatorsList from "../Components/OperatorsList.tsx/OperatorsList";
+import ConversationsTable from "../Components/ConversationTable/ConversationTable";
+import menuItems from "../data/menuItems";
+import overviewCardsData from "../data/overviewCardData";
+import operatorsData from "../data/operatorsData";
+import conversationsData from "../data/conversationData";
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   return (
     <Grid container style={{ height: "100vh" }}>
       
@@ -32,6 +32,7 @@ const Dashboard = () => {
             <OperatorsList operators={operatorsData} />
           </Grid>
         </Grid>
+
         <ConversationsTable conversations={conversationsData} />
       </Grid>
     </Grid>
