@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import { Bar } from "react-chartjs-2";
+// import { Bar } from "react-chartjs-2";
 import { ConversationsChartProps } from "./ConversationChart.types";
 
 const ConversationsChart: React.FC<ConversationsChartProps> = ({ labels, data }) => {
@@ -19,7 +19,7 @@ const ConversationsChart: React.FC<ConversationsChartProps> = ({ labels, data })
     <Card>
       <CardContent>
         <Typography variant="h6">Total Conversations</Typography>
-        <Bar data={chartData} />
+        {/* <Bar data={chartData} /> */}
       </CardContent>
     </Card>
   );
