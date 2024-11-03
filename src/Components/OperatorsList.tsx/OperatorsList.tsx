@@ -1,8 +1,18 @@
 import React from "react";
 import { Card, CardContent, List, ListItem, ListItemText, Typography, Button } from "@mui/material";
-import { OperatorsListProps } from "./OperatorList.types";
 
-const OperatorsList: React.FC<OperatorsListProps> = ({ operators }) => {
+interface Operator {
+  name: string;
+  role: string;
+}
+
+
+interface OperatorsListProps {
+  operators: Operator[];
+  onAddOperator: () => void; 
+}
+
+const OperatorsList: React.FC<OperatorsListProps> = ({ operators, onAddOperator }) => {
   return (
     <Card>
       <CardContent>
@@ -14,7 +24,9 @@ const OperatorsList: React.FC<OperatorsListProps> = ({ operators }) => {
             </ListItem>
           ))}
         </List>
-        <Button variant="outlined" sx={{ mt: 2 }}>Add new Operator</Button>
+        <Button variant="outlined" sx={{ mt: 2 }} onClick={onAddOperator}>
+          Add new Operator
+        </Button>
       </CardContent>
     </Card>
   );
